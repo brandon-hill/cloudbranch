@@ -275,13 +275,8 @@ pre {
 }
 
 .languages .card h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.languages .card h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .languages .card:hover {
@@ -594,7 +589,7 @@ pre {
   }
 
   .cli {
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
   }
 
   .cli .grid > *:first-child {
@@ -605,7 +600,15 @@ pre {
 
   .languages {
     padding: 1rem 0;
-    margin: 1rem .5rem;
+    margin: 1rem 0.5rem;
+  }
+
+  .languages .card {
+    padding: 0.8rem;
+  }
+
+  .languages .card img {
+    height: 4rem;
   }
 
   .features-head,
@@ -633,11 +636,6 @@ pre {
   .docs-main .grid > :first-child {
     position: static;
     padding: 0;
-  }
-
-  .docs-main .grid .card {
-    margin: 0;
-    padding: 1rem;
   }
 }
 
@@ -682,10 +680,6 @@ pre {
     padding: 1rem 0;
     margin: 1rem .5rem;
   }
-
-  .languages h2 {
-    font-size: 1.6rem;
-  }
   
   .languages .container {
     padding: 1rem;
@@ -696,9 +690,8 @@ pre {
     width: 60%;
   }
 
-  .features-sub-head svg {
-    width: 80%;
-    height: auto;
+  .features-sub-head img {
+    width: 60%;
   }
 
   .features-main .card {
@@ -718,6 +711,19 @@ pre {
   .features-main .card p {
     text-align: center;
     text-wrap: balance;
+  }
+
+  .docs-main .grid {
+    padding: 0;
+  }
+
+  .docs-main .grid > :first-child {
+    padding: 0 1rem;
+  }
+
+  .docs-main .card {
+    margin: 0;
+    padding: 1.5rem;
   }
 
   footer .grid > * {
