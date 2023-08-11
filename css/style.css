@@ -56,6 +56,7 @@ pre {
   background: #333;
   color: #fff;
   padding: 10px;
+  border-radius: 4px;
 }
 
 .hidden {
@@ -257,7 +258,7 @@ pre {
 /* Languages */
 .languages {
   max-width: 1100px;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   margin: 3rem auto;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -267,16 +268,22 @@ pre {
 .languages .flex {
   flex-wrap: wrap;
   padding: 0;
+  justify-content: stretch;
 }
 
 .languages .card {
   text-align: center;
   margin: 0.5rem;
+  flex-grow: 1;
 }
 
 .languages .card h4 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
+}
+
+.languages .card img {
+  width: fit-content;
 }
 
 .languages .card:hover {
@@ -316,7 +323,7 @@ pre {
 }
 
 .features-sub-head img {
-  max-width: 300px;
+  max-width: 250px;
   max-height: 300px;
   justify-self: center;
   animation: fadeIn .5s ease-in;
@@ -427,7 +434,7 @@ pre {
 }
 
 .docs-main nav a,
-.docs-main nav h4 {
+.docs-main nav h3 {
   display: block;
   width: 100%;
   padding: .6rem;
@@ -437,7 +444,7 @@ pre {
   border-radius: 8px;
 }
 
-.docs-main nav h4 {
+.docs-main nav h3 {
   margin: .5rem 0 0;
   color: var(--secondary-color);
 }
@@ -455,10 +462,15 @@ pre {
   align-items: flex-start;
   animation: fadeIn .5s ease-in;
   padding: 1.5rem;
+  height: auto;
 }
 
 .docs-main .card section {
-  margin-top: 1rem;
+  margin: 1rem 0;
+}
+
+.docs-main .card h2 {
+  font-size: 2rem;
 }
 
 .docs-main .card h3 {
@@ -582,6 +594,11 @@ pre {
     padding-bottom: 0;
   }
 
+  .docs-head .grid div,
+  .features-head .grid div {
+    animation: slideInFromTop 0.5s ease-in;
+  }
+
   .showcase-form {
     justify-self: center;
     margin: auto;
@@ -599,16 +616,7 @@ pre {
   }
 
   .languages {
-    padding: 1rem 0;
     margin: 1rem 0.5rem;
-  }
-
-  .languages .card {
-    padding: 0.8rem;
-  }
-
-  .languages .card img {
-    height: 4rem;
   }
 
   .features-head,
@@ -637,7 +645,19 @@ pre {
     position: static;
     padding: 0;
   }
+
+  footer .grid > * {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  footer .grid > :first-child {
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
 
 /* Mobile */
 @media(max-width: 650px) {
@@ -724,16 +744,6 @@ pre {
   .docs-main .card {
     margin: 0;
     padding: 1.5rem;
-  }
-
-  footer .grid > * {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-
-  footer .grid > :first-child {
-    flex-direction: column;
-    align-items: center;
+    border-radius: 0;
   }
 }
